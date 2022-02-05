@@ -1,0 +1,21 @@
+{
+	"author": "Dimas López <me@dimaslz.io> (dimaslz)",
+  "repository": {
+    "url": "git+https://github.com/dimaslz/vite-react-library-template.git",
+    "type": "git"
+  },
+  "private": true,
+  "workspaces": ["playground", "./packages/*"],
+	"scripts": {
+		"playground": "yarn workspace playground",
+		"playground:build": "yarn playground build",
+		"playground:dev": "yarn playground dev",
+		"lib": "yarn workspace @dimaslz/dummy-component",
+		"lib:test": "yarn lib test",
+		"test": "yarn lib:test",
+		"lib:build": "yarn lib build",
+		"lib:lint": "yarn lib lint",
+		"playground:lint": "yarn playground lint",
+		"lint": "yarn lib:lint && yarn playground:lint"
+	}
+}
